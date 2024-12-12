@@ -1,0 +1,48 @@
+<h1>Template</h1>
+<h2>Text Interpolation</h2>
+<p>Olá {{name}} - você tem {{calculateAge(2006)}} anos</p>
+
+<hr>
+<h2>Property Binding</h2>
+<button [disabled]="isDisable"> Meu butão</button>
+
+<img [src]="imgSrc" alt="" [width]="maxW" title="gatinho">
+
+<hr>
+<h2>Atribute binding</h2>
+
+<p [attr.arial-label]="name">Matheus Alexandre</p>
+
+<hr>
+
+<h2>Class and Sytle binding</h2>
+<p [class.background-red]="age<18" [class.background-green]="age>=18">{{name}}</p>
+
+<p [style.color]="isOver18">Sua idade é {{age}}</p>
+
+<hr>
+<h2>Event binding</h2>
+<p [style.color]="changeColor()">O valor de i é: {{i}}</p>
+<button (click)="add()" >Adicionar</button>
+<button (click)="remove()" >Remover</button>
+
+<input (keydown.m)="onKeyDown($event)">
+
+<div class="div01" (mousemove)="onMouseMove($event)">
+    <p>Passe o mouse</p>
+</div>
+
+<h3>Two-way binding</h3>
+
+<input [(ngModel)]="name">
+
+{{name}}
+
+<hr>
+<h3>Diretivas de atributos</h3>
+<div [ngClass]= "{ 'background-red': true }">Classes Condicionais </div>
+
+<div [ngStyle]="{
+    color: 'green',
+    'font-size': '20px'
+}">Estilsos dinamicos</div>

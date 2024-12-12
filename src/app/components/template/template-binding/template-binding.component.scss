@@ -1,0 +1,23 @@
+:host {
+    .background-red {
+        background-color: red;
+    }
+
+    .background-green {
+        background-color: green;
+    }
+
+    .div01{
+        width: 200px;
+        height: 200px;
+        background: burlywood;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    :hover.div01{
+        background: rebeccapurple;
+    }
+}
