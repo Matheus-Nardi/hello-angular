@@ -1,0 +1,25 @@
+<h2>Control Flow</h2>
+
+<h3>IF</h3>
+
+<input type="number" [(ngModel)]="age">
+@if (age >= 18) {
+<p>Pode acessar o contéudo. Hehe Boy</p>
+}@else {
+<p>Proibido o acesso ao contéudo</p>
+}
+
+<hr>
+<h3>FOR</h3>
+
+@if (loadingData$ | async; as data) {
+<ul>
+    @for (item of data; track item) {
+    <li>{{item}}</li>
+    }
+</ul>
+}
+
+@else {
+<p>Carregando...</p>
+}
