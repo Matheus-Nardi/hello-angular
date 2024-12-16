@@ -23,3 +23,56 @@
 @else {
 <p>Carregando...</p>
 }
+
+<hr>
+<h3>FOR em OBJETOS</h3>
+<input type="text" placeholder="nome" #name>
+<input type="number" placeholder="idade" #ageUser>
+<button (click)="addNewUser(name.value , ageUser.value)">Add</button>
+<button (click)="clear()">Clear users</button>
+@for (user of users; track user.name;
+let index = $index;
+let count = $count;
+let first = $first;
+let last = $last;
+let even = $even;
+let odd = $odd;
+
+)
+{
+<p>Nome: {{user.name}}</p>
+<p>Idade: {{user.age}}</p>
+<p>Index: {{index}}</p>
+<p>Count: {{count}}</p>
+<p>First: {{first}}</p>
+<p>Last: {{last}}</p>
+<p>Even: {{even}}</p>
+<p>Odd: {{odd}}</p>
+<p>-----------------------</p>
+}@empty {
+<p>Não há usuarios cadastrados</p>
+}
+<hr>
+<h3>SWITCH</h3>
+<button (click)="setPayment('Pix')">Pix</button>
+<button (click)="setPayment('Boleto')">Boleto</button>
+<button (click)="setPayment('CC')">Cartao Credito</button>
+<button (click)="setPayment('CD')">Cartao Debito</button>
+
+@switch (pagamento) {
+@case ('Pix') {
+<p>Voce escolheu pagar com - {{pagamento}}</p>
+}
+@case ('Boleto') {
+<p>Voce escolheu pagar com - {{pagamento}}</p>
+}
+@case ('Cartao credito') {
+<p>Voce escolheu pagar com - {{pagamento}}</p>
+}
+@case ('Cartao debito') {
+<p>Voce escolheu pagar com - {{pagamento}}</p>
+}
+@default {
+    <p>Nenhuma opção escolhida</p>
+}
+}
