@@ -1,0 +1,17 @@
+<h2 #trigger>Deferrable Views</h2>
+
+@defer () {
+    <app-new-component/>
+} @placeholder(minimum 5s) {
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+}@loading(after 150ms; minimum 2s) {
+    <p>Loading do componenet</p>
+}@error {
+    <p>Caso não consiga carregar o componente. Loading fail</p>
+}
