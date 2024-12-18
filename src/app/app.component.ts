@@ -5,11 +5,12 @@ import { TemplateBindingComponent } from './components/template/template-binding
 import { TempalteVariablesComponent } from './components/template/tempalte-variables/tempalte-variables.component';
 import { TemplateControlFlowComponent } from './components/template/template-control-flow/template-control-flow.component';
 import { TemplateDeferrableViewsComponent } from './components/template/template-deferrable-views/template-deferrable-views.component';
+import { SignalsComponent } from './components/signals/signals.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NewComponent, TemplateBindingComponent, TempalteVariablesComponent, TemplateControlFlowComponent, TemplateDeferrableViewsComponent],
+  imports: [RouterOutlet, NewComponent, TemplateBindingComponent, TempalteVariablesComponent, TemplateControlFlowComponent, TemplateDeferrableViewsComponent, SignalsComponent],
   styles: [`
     h1{
       color: purple;
@@ -22,7 +23,8 @@ import { TemplateDeferrableViewsComponent } from './components/template/template
   <!-- <app-template-binding/>
   <app-tempalte-variables/> -->
   <!-- <app-template-control-flow/> -->
-   <app-template-deferrable-views/>
+   <!-- <app-template-deferrable-views/> -->
+  <app-signals/>
   ` ,
 })
 export class AppComponent {

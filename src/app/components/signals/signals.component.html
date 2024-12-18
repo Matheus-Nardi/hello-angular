@@ -1,0 +1,14 @@
+<h2>Signals</h2>
+
+<p>{{firstName()}} {{lastName()}}</p>
+<p>Full name: {{fullName()}}</p>
+
+<ul>
+    @for (item of array(); track $index) {
+    <li>{{item}}</li>
+    }
+</ul>
+
+<button (click)="updateName()">Update Name</button>
+<input #fruta type="text" placeholder="Informe uma fruta">
+<button (click)="updateArray(fruta.value)">Update Array</button>
