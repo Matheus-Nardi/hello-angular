@@ -1,0 +1,6 @@
+<h2>Comunicação entre componentes</h2>
+<app-input inputName="Matheus Ferreira" inputAge="18"/>
+<app-output (outputName)="outputName.set($event)" (outputAge)="outputAge.set($event)"/>
+
+<p> Prato do dia: {{outputName()}}</p>
+<p> Idade do cabra: {{outputAge()}}</p>

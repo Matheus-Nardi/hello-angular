@@ -6,11 +6,13 @@ import { TempalteVariablesComponent } from './components/template/tempalte-varia
 import { TemplateControlFlowComponent } from './components/template/template-control-flow/template-control-flow.component';
 import { TemplateDeferrableViewsComponent } from './components/template/template-deferrable-views/template-deferrable-views.component';
 import { SignalsComponent } from './components/signals/signals.component';
+import { PaiOuMaeComponent } from './components/comunicacao-entre-componenets/pai-ou-mae/pai-ou-mae.component';
+import { AngularPipesComponent } from './components/pipes/angular-pipes/angular-pipes.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NewComponent, TemplateBindingComponent, TempalteVariablesComponent, TemplateControlFlowComponent, TemplateDeferrableViewsComponent, SignalsComponent],
+  imports: [RouterOutlet, NewComponent, TemplateBindingComponent, TempalteVariablesComponent, TemplateControlFlowComponent, TemplateDeferrableViewsComponent, SignalsComponent, PaiOuMaeComponent, AngularPipesComponent],
   styles: [`
     h1{
       color: purple;
@@ -24,7 +26,8 @@ import { SignalsComponent } from './components/signals/signals.component';
   <app-tempalte-variables/> -->
   <!-- <app-template-control-flow/> -->
    <!-- <app-template-deferrable-views/> -->
-  <app-signals/>
+  <!-- <app-pai-ou-mae/> -->
+   <app-angular-pipes/>
   ` ,
 })
 export class AppComponent {
