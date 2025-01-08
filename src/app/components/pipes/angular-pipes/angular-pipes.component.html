@@ -4,5 +4,26 @@
     <li>Hora: {{date() | date:'shortTime'}}</li>
     <li>{{'matheus frango' | uppercase }}</li>
     <li>{{json() | json}}</li>
+    <li>{{loadingData$ | async}}</li>
+    <li>{{2000.50 | currency : "BRL"}}</li>
+    <li>{{2000.50 | number : "1.2-2"}}</li>
+    <li>{{0.2 | percent}}</li>
 </ul>
 
+<h4>Calculadora Juros Simples</h4>
+
+<p>Capital Inicial</p>
+<input [(ngModel)]="capital" type="number" placeholder="R$0,00">
+<p>Juros</p>
+<input [(ngModel)]="juros" type="number" placeholder="2%">
+<p>Tempo em mes</p>
+<input [(ngModel)]="tempo" type="number" placeholder="1">
+
+<button (click)="calcular()">Calcular</button>
+
+<p>O valor de juros acrescido é: {{resultado() | currency: "BRL"}}</p>
+<p>O montante final é: {{resultado() + capital() | currency : "BRL"}} </p>
+
+<h4>Pipe personalizado</h4>
+<input type="text" [(ngModel)]="word" placeholder="Escreva algo"/>
+<p>Pipe de ondas : {{word() | customString : 'waves'}}</p>
